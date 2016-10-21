@@ -1,0 +1,166 @@
+/* CSS Document for screens */
+
+<style>
+
+#page { max-width: 1500px; margin: 0 auto; position: relative}
+
+/* Text */
+
+h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700; }
+h2 { margin: 0 0 .5em 0; font-size: 1.6em; font-weight: 700; line-height: 1.1em; }
+h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 700; }
+h4 { margin: 0 0 1.5em 0; font-size: 1em; font-weight: 700; }
+
+p { margin: 0 0 1em 0; }
+
+a { color: #007eff;}
+a:visited { color: #65b1ff }
+
+/* Button */
+.btn { background-color: #0000ff; padding: 2px 4px;
+    
+}
+
+/* Header */
+header .logo {
+    top: 15px; left: 20px;
+}
+
+
+
+/* Main */
+
+body { font-family: Calibri, sans-serif;}
+
+section.main img { display: block; margin-bottom: 10px; width: 95%; height: 90%}
+
+#slidy-container { 
+  width: 80%; margin: 0 auto; overflow: hidden;
+}
+
+/* Intro */
+
+.Intro {
+    width: 80%
+    min-height: 100px;    
+    margin: auto;
+}
+
+#Caption, #Demonstration {
+    display: inline-block;
+}
+
+#Caption {
+    width: 10%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: inherit;
+}
+
+#Demonstration {
+    height: 300px;
+}
+
+#Demonstration img {
+    max-height: 150%;
+    max-width: 150%;    
+    background-size: contain;
+}
+
+/* Navigation */
+
+nav { 
+    position: absolute;
+    top: 28px; left: 270px; 
+    padding: 50px 0 0 0;
+    width: 100%;
+}
+
+nav::after { content:''; display: block; clear: both;}
+
+nav ul { list-style: none; bottom: 0%; }
+
+nav ul li:hover { border-top: 1px; }
+
+nav ul li a { 
+    display: inline-block;
+    font-size: 1.5em;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a:visited { color: black; }
+
+nav ul li a:hover { 
+    text-decoration: overline;
+    color: cadetblue;
+}
+
+/* top-level */
+
+nav > ul {  }
+
+nav > ul > li { float: left;  }
+
+
+/* Footer */
+
+footer {
+    display: block; min-height: 72px; margin-left: 10%; max-width: 500px;
+}
+
+footer .mainFoot {
+    display: inline-block;  
+    vertical-align: top;
+}
+
+footer div a.tripAdviserSmallLogo {
+    background: url(../images/tripAdviserLogo.png) no-repeat 0 0;
+    display: inline-block; width: 23px; height: 23px;
+    background-size: contain;
+}
+
+footer div a.facebookLogo {
+    background: url(../images/facebookLogo.png) no-repeat 0 0;
+    margin-left: left: 5px;
+    display: inline-block; width: 23px; height: 23px;
+    background-size: contain;
+}
+
+#spacer { 
+    margin-left: 80px; 
+    margin-right: 30px;
+    display: inline-block;
+}
+
+footer .contact { display: inline-block; }
+
+footer div a span { display: none;}
+
+footer .btn {
+    left 5%; color: white; background-color: black; text-decoration: none; padding: 5px 10px;
+}
+
+footer div.box {
+    /*float: right;
+    position: absolute;
+    display: block;*/
+    display: inline-block;
+    position: relative;
+    left: 20%;
+    bottom: 1%;
+    border: 1px;
+    text-align: center;
+}
+
+footer div a.tripAdviserBigLogo {
+    background: url(../images/tripAdviserBigLogo.png) no-repeat 0 0;
+    display: block; width: 150px; height: 72px;
+    background-size: contain;
+    margin: auto;
+}
+
+</style>
