@@ -27,7 +27,6 @@ header .logo {
 }
 
 
-
 /* Main */
 
 body { font-family: Calibri, sans-serif;}
@@ -114,7 +113,7 @@ footer {
 
 footer .mainFoot {
     display: inline-block;  
-    vertical-align: top;
+    vertical-align: top;   
 }
 
 footer div a.tripAdviserSmallLogo {
@@ -161,6 +160,34 @@ footer div a.tripAdviserBigLogo {
     display: block; width: 150px; height: 72px;
     background-size: contain;
     margin: auto;
+}
+
+/* Smaller screens */
+
+@media screen and (max-width: 1000px) {
+    h1 { font-size: 2.4em; }
+    section.main img { width: auto; max-width: 99%; }
+    #slidy-container { 
+        width: 95%; margin: 0 auto; overflow: hidden;
+    }
+    
+}
+
+@media screen and (max-width: 920px) {
+    nav { position: relative; left: 0; padding: 0; margin: 0; }
+    ul { 
+        margin: 0; 
+        padding: 0;
+    }
+    
+    nav > ul > li 
+    {
+        position: relative;
+        display: block;
+        float: none;
+    }
+    
+    footer { margin-left: 0%; margin-top: 20px; }
 }
 
 </style>
