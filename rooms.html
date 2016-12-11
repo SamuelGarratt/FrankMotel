@@ -12,24 +12,136 @@
            $("#logo").load("reused/logo.html")
         });
         </script>
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     </head>
     <body>
         <div id="page">
             <header id="logo"></header>
-            <section class="Intro">
-                <section id="Caption">ROOMS</section>
-                <section id="Demonstration"><img src="images/sleepingArea.jpg"></section>
-            </section>
-            <nav id="navigator"></nav>
-            <footer id="footer"></footer>
-            <section class="rooms">
-                <h1>Our rooms</h1>
-                <section class="roomDemo">
-                    <a href="#" alt="More info"></a>
-                    <p></p>
-                    <a class="btn" href="#" alt="Book now"></a>
-                </section>
-            </section>
+            <section class="Intro">                
+                <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="w3-container" id="apartment">
+    <h2 id="Caption" class="w3-text-white">ROOMS</h2>
+    <div class="w3-display-container mySlides">
+    <img src="images/overallView.jpg" style="width:90%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Standard Studio</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="images/diningRoom.jpg" style="width:90%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Superior Studio</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="images/sleepingArea.jpg" style="width:90%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Family Room</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides">
+    <img src="images/viewFromUpHigh.jpg" style="width:90%;margin-bottom:-6px">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Luxury Studio</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/overallView.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/diningRoom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/sleepingArea.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/viewFromUpHigh.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h4><strong>The space</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Amenities</strong></h4>
+    <div class="w3-row w3-large">
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+        <p><i class="fa fa-fw fa-tv"></i> TV</p>
+      </div>
+      <div class="w3-col s6">
+        <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+        <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+        <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Extra Info</strong></h4>
+    <p>We're a friendly couple who'll do everything we can to make your stay worthwhile.</p>
+    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+    <hr>
+    
+    <h4><strong>Rules</strong></h4>
+    <p>Be good. Do your dishes. Don't cause a mess. Be considerate</p>
+    <p>Subscribe to receive updates on available dates and special offers.</p>
+    <p>
+    <a class="w3-btn w3-green w3-padding w3-third" title="Book now" 
+       href="http://www.booking.com/hotel/nz/wrights-by-the-sea-motel.en-gb.html">Contact us</a>      
+    </p>
+  </div>                                
+                
+</section>
+<nav id="navigator"></nav>
+<footer id="footer"></footer>
+            
+<script>
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>           
+            
         </div>
     </body>
 </html>
