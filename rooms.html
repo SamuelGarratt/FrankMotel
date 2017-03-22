@@ -1,124 +1,93 @@
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Wrights by the sea</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Wrights by the sea - Rooms</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">  
+  <script>
+      var navId = 'Rooms';
         $(function(){
-           $("#navigator").load("reused/navigator.html")
-           $("#footer").load("reused/footer.html") 
-           $("#logo").load("reused/logo.html")
+           $("#navigator").load("common/navigator.html")
+		   $("#footer").load("common/footer.html")		   
         });
-        </script>
-        <link rel="stylesheet" href="css/w3.css">
-    </head>
-    <body>
-        <div id="page">
-            <header id="logo"></header>
-            <section class="Intro">                
-                <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:80px"></div>
+  </script>
+</head>
+<body>
 
-  <!-- Side bar caption -->
-<!-- Sidenav/menu -->
-<nav class="w3-sidenav w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;left:0px;width:150px;font-weight:bold" id="mySidenav"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-padding-xlarge w3-hide-large w3-display-topleft w3-hover-white" style="width:100%">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Rooms</b></h3>
-  </div>
-  <a href="#showcase" onclick="currentDiv(1)" class="w3-padding w3-hover-white">Standard Studio</a> 
-  <a href="#services" onclick="currentDiv(2)" class="w3-padding w3-hover-white">Superior Studio</a> 
-  <a href="#designers" onclick="currentDiv(3)" class="w3-padding w3-hover-white">Family Room</a> 
-  <a href="#packages" onclick="currentDiv(4)" class="w3-padding w3-hover-white">Luxury Studio</a>   
+<nav class="navbar navbar-inverse" id="navigator">
 </nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">    
+    <div class="col-sm-2 sidenav">        
+        <img class="logo" title="Motel logo" src="images/hotel-logo.png">
+        <!-- Room section chooser -->
+		<select id="roomChooser" name="RoomType" onchange="room(this.value)"> 
+            <option value="Standard">Standard Studio</option>
+            <option value="Superior">Superior Studio</option>
+            <option value="Family">Family Room</option>
+            <option value="Luxury">Luxury Studio</option>
+        </select>
+        <a id="bookButton" title="Book now" 
+           href="https://www.thebookingbutton.com.au/properties/wrightsmoteldirect">Book now!</a>      
+        
+    </div>
+    <div class="col-sm-8 text-left">         
+		
+		<!-- Room Header -->
+		<div> 
+			<h2 id="Caption" class="w3-text-white">ROOMS</h2>
+            
+			<div id="Standard" class="w3-display-container mySlides" >
+			<img src="images/overallView.jpg" style="width: 100%;">
+			<div>
+				<h3>Standard Studio</h3>
+			</div>
+			</div>
+			<div id="Superior" class="w3-display-container mySlides">
+			<img src="images/diningRoom.jpg" style="width:100%;">
+			<div class="w3-display-bottomleft w3-container w3-black">
+				<h3>Superior Studio</h3>
+			</div>
+			</div>
+			<div id="Family" >
+			<img src="images/sleepingArea.jpg" style="width:100%;">
+			<div class="w3-display-bottomleft w3-container w3-black">
+				<h3>Family Room</h3>
+			</div>
+			</div>
+			<div id="Luxury" class="w3-display-container mySlides">
+			<img src="images/viewFromUpHigh.jpg" style="width:100%;">
+			<div class="w3-display-bottomleft w3-container w3-black">
+				<h3>Luxury Studio</h3>
+			</div>
+			</div>
+		</div>
+		
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-btn w3-red w3-border w3-border-white w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Company Name</span>
-</header>
-
-<!-- Overlay effect when opening sidenav on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Script -->
+        
+        <script>
+            function room(type) {
+                document.getElementById('Standard').style.display='none';
+                document.getElementById('Superior').style.display='none';
+                document.getElementById('Family').style.display='none';
+                document.getElementById('Luxury').style.display='none';
                 
-    <!--- **********END OF SIDE BAR -->
-                
-                
-                
-                
-  <!-- Slideshow Header -->
-  <div id="slidy-container" style="width:50%;margin-left:20%;">
-    <h2 id="Caption" class="w3-text-white">ROOMS</h2>
-    <div class="w3-display-container mySlides" >
-    <img src="images/overallView.jpg" style="width: 100%;">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Standard Studio</p>
-      </div>
-    </div>
-    <div class="w3-display-container mySlides">
-    <img src="images/diningRoom.jpg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Superior Studio</p>
-      </div>
-    </div>
-    <div class="w3-display-container mySlides">
-    <img src="images/sleepingArea.jpg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Family Room</p>
-      </div>
-    </div>
-    <div class="w3-display-container mySlides">
-    <img src="images/viewFromUpHigh.jpg" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Luxury Studio</p>
-      </div>
-    </div>
-  </div>
-         
-<!-- For selector below image
-                
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col s3">
-        <div class="w3-padding-64">
-            <h1 onclick="currentDiv(1)" style="cursor:pointer">Standard Studio</h1>
-        </div>
-    </div>
-    <div class="w3-col s3">
-        <div class="w3-padding-64">
-            <h1 onclick="currentDiv(2)" style="cursor:pointer">Superior Studio</h1>
-        </div>
-    </div>
-    <div class="w3-col s3">
-        <div class="w3-padding-64">
-            <h1 onclick="currentDiv(3)" style="cursor:pointer">Family Room</h1>
-        </div>
-    </div>
-    <div class="w3-col s3">
-      <div class="w3-padding-64">
-            <h1 onclick="currentDiv(4)" style="cursor:pointer">Luxury Studio</h1>
-        </div>      
-    </div>
-  </div>
--->
-
-  <div class="w3-container" style="margin-left:20%;">
-    <h4><strong>The space</strong></h4>
-    <div class="w3-row w3-large">
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
-        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
-        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
-      </div>
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
-        <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
-      </div>
-    </div>
-    <hr>
-    
-    <h4><strong>Amenities</strong></h4>
+                document.getElementById(type).style.display='inline';  
+            }
+            
+            $(document).ready(function() {
+                room('Standard');    
+            });
+        </script> 
+        
+        <!-- Amenities -->
+        <h4><strong>Amenities</strong></h4>
     <div class="w3-row w3-large">
       <div class="w3-col s6">
         <p><i class="fa fa-fw fa-shower"></i> Shower</p>
@@ -131,68 +100,39 @@
         <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
       </div>
     </div>
-    <hr>
-    
-    <h4><strong>Extra Info</strong></h4>
-    <p>We're a friendly couple who'll do everything we can to make your stay worthwhile.</p>
-    <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
-    <hr>
-    
-    <h4><strong>Rules</strong></h4>
-    <p>Be good. Do your dishes. Don't cause a mess. Be considerate</p>
-    <p>Subscribe to receive updates on available dates and special offers.</p>
-    <p>
-    <a class="w3-btn w3-green w3-padding w3-third" title="Book now" 
-       href="http://www.booking.com/hotel/nz/wrights-by-the-sea-motel.en-gb.html">Book now!</a>      
-    </p>
-  </div>                                
-                
-</section>
-<nav  style="margin-left:20%" id="navigator"></nav>
-<footer style="margin-left:20%" id="footer"></footer>
-            
-<script>
-// Slideshow Apartment Images
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
-}
-    
-// Script to open and close sidenav
-function w3_open() {
-    document.getElementById("mySidenav").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidenav").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-    
-</script>           
-            
+		<!-- Extra Infromation -->
+        <h4><strong>Extra Info</strong></h4>
+        <p>We're a friendly couple who'll do everything we can to make your stay worthwhile.</p>
+        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+        
+        <h4><strong>The space</strong></h4>
+        <div class="w3-row w3-large">
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+            <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+            <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+          </div>
+          <div class="w3-col s6">
+            <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+            <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+          </div>
         </div>
-    </body>
+        
+        <hr>
+        
+        <h4><strong>Rules</strong></h4>
+        <p>Be good. Do your dishes. Don't cause a mess. Be considerate</p>
+        <p>Subscribe to receive updates on available dates and special offers.</p>
+        <p>
+        <a id="bookButton" title="Book now" 
+           href="https://www.thebookingbutton.com.au/properties/wrightsmoteldirect">Book now!</a>      
+        </p>
+    </div>    
+  </div>
+</div>
+
+<footer class="container-fluid text-center" id="footer">
+</footer>
+
+</body>
 </html>
