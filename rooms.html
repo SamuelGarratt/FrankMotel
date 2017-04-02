@@ -23,46 +23,73 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">    
-    <div class="col-sm-2 sidenav">        
+    <div class="col-sm-3 text-left">        
         <img class="logo" title="Motel logo" src="images/hotel-logo.png">
-        <!-- Room section chooser -->
-		<select id="roomChooser" name="RoomType" onchange="room(this.value)"> 
-            <option value="Standard">Standard Studio</option>
-            <option value="Superior">Superior Studio</option>
-            <option value="Family">Family Room</option>
-            <option value="Luxury">Luxury Studio</option>
-        </select>
+        
+        <br>
+<div id="leftBar">        
+        <h4><strong>Amenities</strong></h4>
+    <div>      
+        Shower, Wifi, TV.<br class='notMobile'>      
+        Kitchen, Heating, Accessable.<br class='notMobile'>      
+    </div>
+		<!-- Extra Infromation -->
+        <h4><strong>Extra Info</strong></h4>
+        We're a friendly couple who'll do everything we can to make your stay worthwhile.<br class="notMobile">
+        We accept: Master card, Visa, Amex, Paypayl <br class="notMobile">
+        
+        <h4><strong>The space</strong></h4>
+        <div >          
+            Max people: 4<br class="notMobile">
+            Bathrooms: 2 <br class="notMobile">
+            Bedrooms: 1<br class="notMobile">          
+            <b>Check In:</b> After 3PM<br class="notMobile">
+            <b>Check Out:</b> 12PM          
+        </div>
+        
+        <hr class="notMobile">
+        
+        <h4><strong>Rules</strong></h4>
+        Be good. Do your dishes. Don't cause a mess. Be considerate<br class="notMobile">
+        Subscribe to receive updates on available dates and special offers.<br class="notMobile"><br class="notMobile">
+        
         <a id="bookButton" title="Book now" 
            href="https://www.thebookingbutton.com.au/properties/wrightsmoteldirect">Book now!</a>      
         
     </div>
-    <div class="col-sm-8 text-left">         
+    </div>
+    <div class="col-sm-6 text-left">         
 		
 		<!-- Room Header -->
-		<div> 
-			<h2 id="Caption" class="w3-text-white">ROOMS</h2>
-            
-			<div id="Standard" class="w3-display-container mySlides" >
+		<div> 			
+            <!-- Room section chooser -->		            
+			<div id="Executive">
 			<img src="images/overallView.jpg" style="width: 100%;">
 			<div>
-				<h3>Standard Studio</h3>
+				<h3>Executive Studio</h3>
 			</div>
 			</div>
-			<div id="Superior" class="w3-display-container mySlides">
+			<div id="Deluxe">
 			<img src="images/diningRoom.jpg" style="width:100%;">
-			<div class="w3-display-bottomleft w3-container w3-black">
-				<h3>Superior Studio</h3>
+			<div>
+				<h3>Deluxe Studio</h3>
+			</div>
+			</div>
+            <div id="OneBedroom" >
+			<img src="images/amazingView.jpg" style="width:100%;">
+			<div>
+				<h3>One Bedroom Unit</h3>
 			</div>
 			</div>
 			<div id="Family" >
 			<img src="images/sleepingArea.jpg" style="width:100%;">
-			<div class="w3-display-bottomleft w3-container w3-black">
-				<h3>Family Room</h3>
+			<div>
+				<h3>Two storied One Bedroom Unit</h3>
 			</div>
 			</div>
-			<div id="Luxury" class="w3-display-container mySlides">
+			<div id="Luxury">
 			<img src="images/viewFromUpHigh.jpg" style="width:100%;">
-			<div class="w3-display-bottomleft w3-container w3-black">
+			<div>
 				<h3>Luxury Studio</h3>
 			</div>
 			</div>
@@ -73,8 +100,9 @@
         
         <script>
             function room(type) {
-                document.getElementById('Standard').style.display='none';
-                document.getElementById('Superior').style.display='none';
+                document.getElementById('Executive').style.display='none';
+                document.getElementById('Deluxe').style.display='none';
+                document.getElementById('OneBedroom').style.display='none';
                 document.getElementById('Family').style.display='none';
                 document.getElementById('Luxury').style.display='none';
                 
@@ -82,52 +110,16 @@
             }
             
             $(document).ready(function() {
-                room('Standard');    
+                room('Executive');    
             });
         </script> 
         
         <!-- Amenities -->
-        <h4><strong>Amenities</strong></h4>
-    <div class="w3-row w3-large">
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
-        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
-        <p><i class="fa fa-fw fa-tv"></i> TV</p>
-      </div>
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
-        <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
-        <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
-      </div>
-    </div>
-		<!-- Extra Infromation -->
-        <h4><strong>Extra Info</strong></h4>
-        <p>We're a friendly couple who'll do everything we can to make your stay worthwhile.</p>
-        <p>We accept: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
+        </div> 
+        <div class="col-sm-2 sidenav">
         
-        <h4><strong>The space</strong></h4>
-        <div class="w3-row w3-large">
-          <div class="w3-col s6">
-            <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
-            <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
-            <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
-          </div>
-          <div class="w3-col s6">
-            <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
-            <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
-          </div>
         </div>
-        
-        <hr>
-        
-        <h4><strong>Rules</strong></h4>
-        <p>Be good. Do your dishes. Don't cause a mess. Be considerate</p>
-        <p>Subscribe to receive updates on available dates and special offers.</p>
-        <p>
-        <a id="bookButton" title="Book now" 
-           href="https://www.thebookingbutton.com.au/properties/wrightsmoteldirect">Book now!</a>      
-        </p>
-    </div>    
+       
   </div>
 </div>
 
